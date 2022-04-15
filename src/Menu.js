@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 import './Button.css';
 
 class Menu extends React.Component {
@@ -19,7 +20,7 @@ class Menu extends React.Component {
         <ul>
           {notesList}
         </ul>
-        <button class="button circle-button" onClick={this.handleNewNote}>+</button>
+        <Button onClick={this.handleNewNote}>+</Button>
       </div>
     );
   }

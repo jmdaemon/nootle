@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // Stub the implementation for notes
 root.render(
   <React.StrictMode>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <Menu notes={['Notes', 'Prototypes.md']}/>
   </React.StrictMode>
 );
