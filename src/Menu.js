@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.css';
 
 class Menu extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class Menu extends React.Component {
         <ul>
           {notesList}
         </ul>
+        <button class="button circle-button">+</button>
       </div>
     );
   }
