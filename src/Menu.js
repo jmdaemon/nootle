@@ -6,6 +6,10 @@ class Menu extends React.Component {
       super(props);
       this.notes = props.notes
     }
+  
+  handleNewNote() {
+    console.log("Button was clicked");
+  }
 
   render() {
     const notesList = this.notes.map((note) => <li>{note}</li>);
@@ -15,7 +19,7 @@ class Menu extends React.Component {
         <ul>
           {notesList}
         </ul>
-        <button class="button circle-button">+</button>
+        <button class="button circle-button" onClick={this.handleNewNote}>+</button>
       </div>
     );
   }
