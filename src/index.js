@@ -5,9 +5,10 @@ import Menu from './Menu';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// Stub the implementation for notes
 root.render(
   <React.StrictMode>
-    <Menu />
+    <Menu notes={['Notes', 'Prototypes.md']}/>
   </React.StrictMode>
 );
 
