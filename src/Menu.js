@@ -17,19 +17,28 @@ class Menu extends React.Component {
   }
 
   setOpen(value) {
-    //this.state.open = value;
     this.setState({open: value});
   }
 
+  // Create a new note with the filename specified
+  // and open the file editor
   handleCreateNewNote() {
-    this.setOpen(true);
+    this.setOpen(false);
   }
 
+  // Close the new note dialog
   handleCancelNewNote() {
     this.setOpen(false);
   }
+
+  // Open the new note dialog
+  openNewNoteDialog() {
+    this.setOpen(true);
+  }
   
+  // Show the main menu
   render() {
+    // Show all the notes as a list
     const notesList = this.notes.map((note) => <li>{note}</li>);
     return (
       <div>
@@ -37,7 +46,7 @@ class Menu extends React.Component {
         <ul>
           {notesList}
         </ul>
-        <Button onClick={() => {this.handleCreateNewNote()}}>+</Button>
+        <Button onClick={() => {this.openNewNoteDialog()}}>+</Button>
         <Dialog open={this.state.open} onClose={() => {this.handleCancelNewNote()} }>
         <DialogTitle>Make New Note</DialogTitle>
         <DialogContent>
@@ -52,7 +61,7 @@ class Menu extends React.Component {
         </DialogContent>
         <DialogActions>
           <Button onClick={() => {this.handleCancelNewNote()} }>Cancel</Button>
-          <Button onClick={() => {this.handleCancelNewNote()} }>Create</Button>
+          <Button onClick={() => {this.handleCreateNewNote()} }>Create</Button>
         </DialogActions>
       </Dialog>
       </div>
