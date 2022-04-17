@@ -3,13 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Menu from './Menu';
 import reportWebVitals from './reportWebVitals';
+import pino from 'pino';
+
+const logger = pino();
+
+//import winston from 'winston';
+
+//const logger = winston.createLogger({
+  //transports: [
+    //new winston.transports.Console()
+  //]});
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Stub the implementation for notes
 root.render(
   <React.StrictMode>
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <Menu notes={['Notes', 'Prototypes.md']}/>
+    <Menu notes={['Notes', 'Prototypes.md']} logger={logger}/>
   </React.StrictMode>
 );
 

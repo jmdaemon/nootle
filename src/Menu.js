@@ -14,10 +14,12 @@ class Menu extends React.Component {
     this.state = {
       open: false
     };
+    this.logger = props.logger;
   }
 
   setOpen(value) {
     this.setState({open: value});
+    this.logger.info(`New Note Form Dialog is ${ this.state.open ? 'visible' : 'not visible'}`);
   }
 
   // Create a new note with the filename specified
