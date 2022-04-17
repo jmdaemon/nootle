@@ -5,15 +5,8 @@ import Menu from './Menu';
 import reportWebVitals from './reportWebVitals';
 import pino from 'pino';
 
+// Create our application's logger
 const logger = pino();
-
-//import winston from 'winston';
-
-//const logger = winston.createLogger({
-  //transports: [
-    //new winston.transports.Console()
-  //]});
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Stub the implementation for notes

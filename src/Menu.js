@@ -42,6 +42,7 @@ class Menu extends React.Component {
   render() {
     // Show all the notes as a list
     const notesList = this.notes.map((note) => <li>{note}</li>);
+    this.logger.info(`Notes available:\n${this.notes}`);
     return (
       <div>
         <h2>Your Nootles</h2>
