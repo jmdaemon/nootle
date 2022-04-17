@@ -5,6 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
+import { Link } from "react-router-dom";
 import './Button.css';
 
 class Menu extends React.Component {
@@ -64,7 +65,11 @@ class Menu extends React.Component {
         </DialogContent>
         <DialogActions>
           <Button onClick={() => {this.handleCancelNewNote()} }>Cancel</Button>
-          <Button onClick={() => {this.handleCreateNewNote()} }>Create</Button>
+          <nav>
+            <Link to="/edit">
+              <Button onClick={() => {this.handleCreateNewNote()} }>Create</Button>
+            </Link>
+          </nav>
         </DialogActions>
       </Dialog>
       </div>
